@@ -1,0 +1,798 @@
+2020-06-01 08:25:42.067  INFO 28876 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 28876 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:25:42.079  INFO 28876 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 08:25:42.180  INFO 28876 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\upatra\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-06-01 08:25:42.182  INFO 28876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-01 08:25:42.183  INFO 28876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-01 08:25:43.375  INFO 28876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:25:43.467  INFO 28876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 1 JPA repository interfaces.
+2020-06-01 08:25:44.680  INFO 28876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 08:25:44.693  INFO 28876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 08:25:44.694  INFO 28876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 08:25:45.039  INFO 28876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 08:25:45.039  INFO 28876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2856 ms
+2020-06-01 08:25:45.110 ERROR 28876 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'linkSharing': Unsatisfied dependency expressed through field 'linkService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'linkServiceImpl': Unsatisfied dependency expressed through field 'linkRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkRepositoryImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+2020-06-01 08:25:45.135  INFO 28876 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-01 08:25:45.152  WARN 28876 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-06-01 08:25:45.172  INFO 28876 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-01 08:25:45.200 ERROR 28876 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.xebia.linksharing.LinkSharing.main(LinkSharing.java:35) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'linkSharing': Unsatisfied dependency expressed through field 'linkService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'linkServiceImpl': Unsatisfied dependency expressed through field 'linkRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkRepositoryImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5140) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_221]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_221]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_221]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) ~[na:1.8.0_221]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'linkServiceImpl': Unsatisfied dependency expressed through field 'linkRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkRepositoryImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkRepositoryImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessProperties(PersistenceAnnotationBeanPostProcessor.java:362) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 81 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1158) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1125) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findDefaultEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:586) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findEntityManagerFactory(PersistenceAnnotationBeanPostProcessor.java:549) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.resolveEntityManager(PersistenceAnnotationBeanPostProcessor.java:717) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor$PersistenceElement.getResourceToInject(PersistenceAnnotationBeanPostProcessor.java:690) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessProperties(PersistenceAnnotationBeanPostProcessor.java:359) ~[spring-orm-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 94 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 114 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 128 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1290) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.getIfUnique(DefaultListableBeanFactory.java:1947) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.flyway(FlywayAutoConfiguration.java:128) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 129 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 147 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.h2.Driver
+	at org.springframework.util.Assert.state(Assert.java:94) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:222) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:174) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:43) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:85) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 148 common frames omitted
+
+2020-06-01 08:30:17.378  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 23440 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:30:17.381  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 08:30:17.471  INFO 23440 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\upatra\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-06-01 08:30:17.472  INFO 23440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-01 08:30:17.473  INFO 23440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-01 08:30:18.751  INFO 23440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:30:18.839  INFO 23440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 1 JPA repository interfaces.
+2020-06-01 08:30:20.097  INFO 23440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 08:30:20.108  INFO 23440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 08:30:20.108  INFO 23440 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 08:30:20.325  INFO 23440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 08:30:20.325  INFO 23440 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2852 ms
+2020-06-01 08:30:20.410  INFO 23440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-01 08:30:20.624  INFO 23440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-01 08:30:20.633  INFO 23440 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 08:30:20.847  INFO 23440 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-06-01 08:30:20.867  INFO 23440 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 08:30:20.903  WARN 23440 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 08:30:20.960  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.039s)
+2020-06-01 08:30:20.991  INFO 23440 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 08:30:21.079  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 08:30:21.088  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 08:30:21.140  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.074s)
+2020-06-01 08:30:21.300  INFO 23440 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 08:30:21.425  INFO 23440 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-01 08:30:21.633  INFO 23440 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 08:30:21.797  INFO 23440 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 08:30:22.826 DEBUG 23440 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 08:30:22.828  INFO 23440 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 08:30:22.839  INFO 23440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:30:23.433  INFO 23440 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 08:30:23.434  INFO 23440 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 08:30:23.533  INFO 23440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 08:30:24.192  INFO 23440 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 08:30:24.483  INFO 23440 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:30:24.669  INFO 23440 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 08:30:24.733  INFO 23440 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 08:30:24.769  INFO 23440 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 08:30:24.829  INFO 23440 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 08:30:25.453  INFO 23440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 08:30:25.455  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 8.836 seconds (JVM running for 10.898)
+2020-06-01 08:30:45.238  INFO 23440 --- [http-nio-8090-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-01 08:30:45.238  INFO 23440 --- [http-nio-8090-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-01 08:30:45.255  INFO 23440 --- [http-nio-8090-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-06-01 08:31:45.027 DEBUG 23440 --- [http-nio-8090-exec-7] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:32:59.198 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:32:59.443 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 08:32:59.462 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 08:32:59.493 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 08:39:09.961 DEBUG 23440 --- [http-nio-8090-exec-7] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:10.003 DEBUG 23440 --- [http-nio-8090-exec-7] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:18.856 DEBUG 23440 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:18.862 DEBUG 23440 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:19.050 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:19.053 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:19.246 DEBUG 23440 --- [http-nio-8090-exec-8] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:19.251 DEBUG 23440 --- [http-nio-8090-exec-8] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:19.471 DEBUG 23440 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:19.475 DEBUG 23440 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:19.639 DEBUG 23440 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:39:19.644 DEBUG 23440 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:39:24.673 DEBUG 23440 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:39:24.692 DEBUG 23440 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 08:39:24.699 DEBUG 23440 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:41:37.061  INFO 23440 --- [Thread-6] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 08:41:37.061  INFO 23440 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:41:37.066  INFO 23440 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:41:37.277  WARN 23440 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 08:41:37.277  INFO 23440 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-01 08:41:37.282  INFO 23440 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-01 08:41:38.235  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 23440 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:41:38.235  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 08:41:38.822  INFO 23440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:41:38.835  INFO 23440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 1 JPA repository interfaces.
+2020-06-01 08:41:39.227  INFO 23440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 08:41:39.227  INFO 23440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 08:41:39.228  INFO 23440 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 08:41:39.254  INFO 23440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 08:41:39.254  INFO 23440 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1014 ms
+2020-06-01 08:41:39.277  INFO 23440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-06-01 08:41:39.280  INFO 23440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-06-01 08:41:39.280  INFO 23440 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 08:41:39.319  INFO 23440 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 08:41:39.321  WARN 23440 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 08:41:39.328  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.006s)
+2020-06-01 08:41:39.337  INFO 23440 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 08:41:39.354  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 08:41:39.359  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 08:41:39.378  INFO 23440 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.029s)
+2020-06-01 08:41:39.409  INFO 23440 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 08:41:39.415  INFO 23440 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 08:41:39.529 DEBUG 23440 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 08:41:39.532  INFO 23440 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 08:41:39.532  INFO 23440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:41:39.677  INFO 23440 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 08:41:39.677  INFO 23440 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 08:41:39.695  INFO 23440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 08:41:39.914  INFO 23440 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 08:41:40.021  INFO 23440 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:41:40.091  INFO 23440 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 08:41:40.137  INFO 23440 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 08:41:40.138  INFO 23440 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 08:41:40.150  INFO 23440 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 08:41:40.230  INFO 23440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 08:41:40.232  INFO 23440 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.046 seconds (JVM running for 685.674)
+2020-06-01 08:41:40.235  INFO 23440 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-01 08:42:48.478  INFO 23440 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-01 08:42:48.480  INFO 23440 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-01 08:42:48.486  INFO 23440 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-01 08:42:48.504 DEBUG 23440 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:44:00.643 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:44:00.706 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 08:44:00.709 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 08:44:00.712 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 08:47:17.828 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:47:17.837 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 08:47:17.839 DEBUG 23440 --- [http-nio-8090-exec-9] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:47:55.036 DEBUG 23440 --- [http-nio-8090-exec-8] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:48:49.974 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:48:49.976 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:49:05.759 DEBUG 23440 --- [http-nio-8090-exec-6] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:49:05.760 DEBUG 23440 --- [http-nio-8090-exec-6] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 08:49:29.004 DEBUG 23440 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:49:29.007 DEBUG 23440 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:49:29.043  WARN 23440 --- [http-nio-8090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.xebia.linksharing.common.exception.DuplicateUrlException: Duplicate submission ::https://www.google.com/]
+2020-06-01 08:49:59.952 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:49:59.958 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 08:49:59.960 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 08:49:59.962 DEBUG 23440 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 08:50:16.992 DEBUG 23440 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:50:16.993 DEBUG 23440 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 08:50:16.995 DEBUG 23440 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:50:39.594 DEBUG 23440 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:50:39.595 DEBUG 23440 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:50:56.857 DEBUG 23440 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : select link0_.id as id1_0_0_, link0_.created_at as created_2_0_0_, link0_.last_modified_date as last_mod3_0_0_, link0_.status as status4_0_0_, link0_.fav_count as fav_coun5_0_0_, link0_.title as title6_0_0_, link0_.url as url7_0_0_, tags1_.tag_link as tag_link3_1_1_, tags1_.id as id1_1_1_, tags1_.id as id1_1_2_, tags1_.tag_name as tag_name2_1_2_ from link link0_ left outer join tag tags1_ on link0_.id=tags1_.tag_link where link0_.id=?
+2020-06-01 08:50:56.861 DEBUG 23440 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : update link set last_modified_date=?, status=?, fav_count=?, title=?, url=? where id=?
+2020-06-01 08:52:49.341  INFO 23736 --- [main] c.x.l.controller.LinkControllerTest      : Starting LinkControllerTest on XE-GGN-IT-00021 with PID 23736 (started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:52:49.345  INFO 23736 --- [main] c.x.l.controller.LinkControllerTest      : The following profiles are active: test
+2020-06-01 08:52:51.927  INFO 23736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:52:52.141  INFO 23736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188ms. Found 1 JPA repository interfaces.
+2020-06-01 08:52:54.629  INFO 23736 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-06-01 08:52:54.662  INFO 23736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-01 08:52:55.528  INFO 23736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-01 08:52:55.614  INFO 23736 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 08:52:55.724  WARN 23736 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 08:52:55.835  INFO 23736 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.070s)
+2020-06-01 08:52:55.870  INFO 23736 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 08:52:56.039  INFO 23736 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 08:52:56.062  INFO 23736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 08:52:56.130  INFO 23736 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.129s)
+2020-06-01 08:52:56.516  INFO 23736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 08:52:56.807  INFO 23736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-01 08:52:57.149  INFO 23736 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 08:52:58.050  INFO 23736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 08:53:00.187 DEBUG 23736 --- [main] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 08:53:00.193  INFO 23736 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 08:53:00.214  INFO 23736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:53:03.329  INFO 23736 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 08:53:04.596  INFO 23736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:53:05.270  INFO 23736 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 08:53:05.369  INFO 23736 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 08:53:05.496  INFO 23736 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-01 08:53:05.497  INFO 23736 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-01 08:53:05.523  INFO 23736 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 26 ms
+2020-06-01 08:53:05.565  INFO 23736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 08:53:05.635  INFO 23736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 08:53:05.813  INFO 23736 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 08:53:06.382  INFO 23736 --- [main] c.x.l.controller.LinkControllerTest      : Started LinkControllerTest in 18.659 seconds (JVM running for 25.038)
+2020-06-01 08:53:07.653 DEBUG 23736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:53:07.788 DEBUG 23736 --- [main] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:53:07.866  WARN 23736 --- [main] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2020-06-01 08:53:07.881 DEBUG 23736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 08:53:09.735 DEBUG 23736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:53:09.983 DEBUG 23736 --- [main] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 08:53:10.002 DEBUG 23736 --- [main] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 08:53:10.054 DEBUG 23736 --- [main] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 08:53:14.088  INFO 23736 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 08:53:14.090  INFO 23736 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:53:14.113  INFO 23736 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:53:14.126  INFO 23736 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-01 08:53:14.139  INFO 23736 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-01 08:57:13.033 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:57:13.035 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 08:57:13.037 DEBUG 23440 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 08:57:19.074  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-06-01 08:57:19.078  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 08:57:19.078  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:57:19.082  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:57:19.286  WARN 23440 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 08:57:19.287  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-06-01 08:57:19.297  INFO 23440 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-06-01 08:57:57.957  INFO 33584 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 33584 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:57:57.960  INFO 33584 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 08:57:58.048  INFO 33584 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\upatra\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-06-01 08:57:58.049  INFO 33584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-01 08:57:58.049  INFO 33584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-01 08:57:59.095  INFO 33584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:57:59.176  INFO 33584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 1 JPA repository interfaces.
+2020-06-01 08:58:00.296  INFO 33584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 08:58:00.306  INFO 33584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 08:58:00.307  INFO 33584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 08:58:00.515  INFO 33584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 08:58:00.516  INFO 33584 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2467 ms
+2020-06-01 08:58:00.573  INFO 33584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-01 08:58:00.718  INFO 33584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-01 08:58:00.727  INFO 33584 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 08:58:00.913  INFO 33584 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-06-01 08:58:00.927  INFO 33584 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 08:58:00.961  WARN 33584 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 08:58:01.022  INFO 33584 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.044s)
+2020-06-01 08:58:01.042  INFO 33584 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 08:58:01.141  INFO 33584 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 08:58:01.150  INFO 33584 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 08:58:01.192  INFO 33584 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.063s)
+2020-06-01 08:58:01.309  INFO 33584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 08:58:01.457  INFO 33584 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-01 08:58:01.646  INFO 33584 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 08:58:01.810  INFO 33584 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 08:58:02.725 DEBUG 33584 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 08:58:02.727  INFO 33584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 08:58:02.738  INFO 33584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:58:03.283  INFO 33584 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 08:58:03.284  INFO 33584 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 08:58:03.354  INFO 33584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 08:58:03.836  INFO 33584 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 08:58:04.085  INFO 33584 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:58:04.253  INFO 33584 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 08:58:04.318  INFO 33584 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 08:58:04.340  INFO 33584 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 08:58:04.400  INFO 33584 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 08:58:04.941  INFO 33584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 08:58:04.946  INFO 33584 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 7.56 seconds (JVM running for 9.456)
+2020-06-01 08:58:05.590  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-06-01 08:58:05.598  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 08:58:05.600  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:58:05.607  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:58:05.818  WARN 33584 --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 08:58:05.820  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-01 08:58:05.839  INFO 33584 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-01 08:58:19.461  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 31424 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 08:58:19.467  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 08:58:19.561  INFO 31424 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\upatra\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/upatra/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-06-01 08:58:19.562  INFO 31424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-01 08:58:19.562  INFO 31424 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-01 08:58:20.770  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 08:58:20.882  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 1 JPA repository interfaces.
+2020-06-01 08:58:22.239  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 08:58:22.250  INFO 31424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 08:58:22.250  INFO 31424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 08:58:22.491  INFO 31424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 08:58:22.491  INFO 31424 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2928 ms
+2020-06-01 08:58:22.561  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-01 08:58:22.747  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-01 08:58:22.757  INFO 31424 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 08:58:22.946  INFO 31424 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-06-01 08:58:22.965  INFO 31424 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 08:58:23.007  WARN 31424 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 08:58:23.071  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.045s)
+2020-06-01 08:58:23.095  INFO 31424 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 08:58:23.166  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 08:58:23.178  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 08:58:23.224  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.069s)
+2020-06-01 08:58:23.362  INFO 31424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 08:58:23.512  INFO 31424 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-01 08:58:23.753  INFO 31424 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 08:58:23.935  INFO 31424 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 08:58:25.079 DEBUG 31424 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 08:58:25.081  INFO 31424 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 08:58:25.093  INFO 31424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 08:58:25.722  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 08:58:25.723  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 08:58:25.823  INFO 31424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 08:58:26.346  INFO 31424 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 08:58:26.618  INFO 31424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 08:58:26.880  INFO 31424 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 08:58:26.968  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 08:58:26.999  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 08:58:27.079  INFO 31424 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 08:58:27.728  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 08:58:27.734  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 8.923 seconds (JVM running for 10.845)
+2020-06-01 08:58:38.192  INFO 31424 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-01 08:58:38.193  INFO 31424 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-01 08:58:38.207  INFO 31424 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-06-01 08:58:46.365 DEBUG 31424 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 08:59:27.714 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 08:59:27.833 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 08:59:27.844 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 08:59:27.873 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 08:59:58.786 DEBUG 31424 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 09:00:08.392 DEBUG 31424 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : select distinct link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.fav_count desc, link0_.created_at asc limit ?
+2020-06-01 09:00:08.412 DEBUG 31424 --- [http-nio-8090-exec-3] org.hibernate.SQL                        : select tags0_.tag_link as tag_link3_1_0_, tags0_.id as id1_1_0_, tags0_.id as id1_1_1_, tags0_.tag_name as tag_name2_1_1_ from tag tags0_ where tags0_.tag_link=?
+2020-06-01 09:00:24.712 DEBUG 31424 --- [http-nio-8090-exec-4] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 09:00:56.657 ERROR 31424 --- [http-nio-8090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Unable to locate Attribute  with the the given name [tagName] on this ManagedType [com.xebia.linksharing.model.AuditModel]; nested exception is java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [tagName] on this ManagedType [com.xebia.linksharing.model.AuditModel]] with root cause
+
+java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [tagName] on this ManagedType [com.xebia.linksharing.model.AuditModel]
+	at org.hibernate.metamodel.model.domain.internal.AbstractManagedType.checkNotNull(AbstractManagedType.java:147) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.metamodel.model.domain.internal.AbstractManagedType.getAttribute(AbstractManagedType.java:118) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.metamodel.model.domain.internal.AbstractManagedType.getAttribute(AbstractManagedType.java:116) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.metamodel.model.domain.internal.AbstractManagedType.getAttribute(AbstractManagedType.java:43) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.query.criteria.internal.path.AbstractFromImpl.locateAttributeInternal(AbstractFromImpl.java:111) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.locateAttribute(AbstractPathImpl.java:204) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.get(AbstractPathImpl.java:177) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at com.xebia.linksharing.repository.LinkPredicate.getLinkPredicates(LinkPredicate.java:22) ~[classes/:na]
+	at com.xebia.linksharing.repository.LinkRepositoryImpl.getAllLinks(LinkRepositoryImpl.java:51) ~[classes/:na]
+	at com.xebia.linksharing.repository.LinkRepositoryImpl$$FastClassBySpringCGLIB$$594e36ee.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at com.xebia.linksharing.repository.LinkRepositoryImpl$$EnhancerBySpringCGLIB$$56fe2c09.getAllLinks(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:371) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:204) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:657) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:621) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178) ~[spring-data-jpa-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at com.sun.proxy.$Proxy136.getAllLinks(Unknown Source) ~[na:na]
+	at com.xebia.linksharing.service.LinkServiceImpl.getAllLinks(LinkServiceImpl.java:80) ~[classes/:na]
+	at com.xebia.linksharing.service.LinkServiceImpl$$FastClassBySpringCGLIB$$fef533c8.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at com.xebia.linksharing.service.LinkServiceImpl$$EnhancerBySpringCGLIB$$aa69f6c0.getAllLinks(<generated>) ~[classes/:na]
+	at com.xebia.linksharing.controller.LinkSharingController.getAllLinks(LinkSharingController.java:71) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2020-06-01 09:01:20.959  INFO 31424 --- [Thread-6] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 09:01:20.966  INFO 31424 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:01:20.973  INFO 31424 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:01:21.192  WARN 31424 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 09:01:21.193  INFO 31424 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-01 09:01:21.204  INFO 31424 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-01 09:01:22.375  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 31424 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 09:01:22.375  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 09:01:23.087  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 09:01:23.104  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 1 JPA repository interfaces.
+2020-06-01 09:01:23.664  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 09:01:23.665  INFO 31424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 09:01:23.665  INFO 31424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 09:01:23.698  INFO 31424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 09:01:23.698  INFO 31424 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1312 ms
+2020-06-01 09:01:23.732  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-06-01 09:01:23.736  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-06-01 09:01:23.736  INFO 31424 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 09:01:23.782  INFO 31424 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 09:01:23.785  WARN 31424 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 09:01:23.792  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.005s)
+2020-06-01 09:01:23.802  INFO 31424 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 09:01:23.822  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 09:01:23.832  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 09:01:23.851  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.037s)
+2020-06-01 09:01:23.888  INFO 31424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 09:01:23.893  INFO 31424 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 09:01:24.021 DEBUG 31424 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 09:01:24.023  INFO 31424 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 09:01:24.023  INFO 31424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:01:24.216  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 09:01:24.216  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 09:01:24.252  INFO 31424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 09:01:24.455  INFO 31424 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 09:01:24.557  INFO 31424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:01:24.637  INFO 31424 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 09:01:24.704  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 09:01:24.705  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 09:01:24.724  INFO 31424 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 09:01:24.824  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 09:01:24.827  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.517 seconds (JVM running for 187.938)
+2020-06-01 09:01:24.840  INFO 31424 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-01 09:01:55.030  INFO 31424 --- [Thread-10] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 09:01:55.031  INFO 31424 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:01:55.035  INFO 31424 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:01:55.237  WARN 31424 --- [Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 09:01:55.238  INFO 31424 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-06-01 09:01:55.240  INFO 31424 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-06-01 09:01:56.372  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 31424 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 09:01:56.372  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 09:01:57.098  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 09:01:57.114  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-06-01 09:01:57.587  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 09:01:57.588  INFO 31424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 09:01:57.589  INFO 31424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 09:01:57.623  INFO 31424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 09:01:57.623  INFO 31424 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1238 ms
+2020-06-01 09:01:57.664  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-06-01 09:01:57.668  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-06-01 09:01:57.670  INFO 31424 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 09:01:57.713  INFO 31424 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 09:01:57.716  WARN 31424 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 09:01:57.722  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2020-06-01 09:01:57.731  INFO 31424 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 09:01:57.748  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 09:01:57.752  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 09:01:57.769  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.025s)
+2020-06-01 09:01:57.812  INFO 31424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 09:01:57.818  INFO 31424 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 09:01:57.917 DEBUG 31424 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 09:01:57.919  INFO 31424 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 09:01:57.920  INFO 31424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:01:58.112  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 09:01:58.112  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 09:01:58.138  INFO 31424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 09:01:58.321  INFO 31424 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 09:01:58.409  INFO 31424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:01:58.482  INFO 31424 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 09:01:58.524  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 09:01:58.525  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 09:01:58.537  INFO 31424 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 09:01:58.614  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 09:01:58.616  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.331 seconds (JVM running for 221.727)
+2020-06-01 09:01:58.622  INFO 31424 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-01 09:24:00.617  INFO 31424 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-01 09:24:00.619  INFO 31424 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-01 09:24:00.652  INFO 31424 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2020-06-01 09:24:13.041 DEBUG 31424 --- [http-nio-8090-exec-1] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 09:24:31.128 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 09:24:31.158 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 09:24:31.162 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 09:24:31.165 DEBUG 31424 --- [http-nio-8090-exec-2] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 09:25:04.134  INFO 26736 --- [main] c.x.l.controller.LinkControllerTest      : Starting LinkControllerTest on XE-GGN-IT-00021 with PID 26736 (started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 09:25:04.136  INFO 26736 --- [main] c.x.l.controller.LinkControllerTest      : The following profiles are active: test
+2020-06-01 09:25:05.585  INFO 26736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 09:25:05.680  INFO 26736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80ms. Found 1 JPA repository interfaces.
+2020-06-01 09:25:07.324  INFO 26736 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 6.0.8 by Redgate
+2020-06-01 09:25:07.340  INFO 26736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-01 09:25:07.860  INFO 26736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-01 09:25:07.898  INFO 26736 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 09:25:07.959  WARN 26736 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 09:25:08.070  INFO 26736 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.062s)
+2020-06-01 09:25:08.101  INFO 26736 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 09:25:08.207  INFO 26736 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 09:25:08.221  INFO 26736 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 09:25:08.290  INFO 26736 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.098s)
+2020-06-01 09:25:08.612  INFO 26736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 09:25:08.855  INFO 26736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-06-01 09:25:09.175  INFO 26736 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 09:25:09.956  INFO 26736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 09:25:11.440 DEBUG 26736 --- [main] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 09:25:11.443  INFO 26736 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 09:25:11.458  INFO 26736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:25:13.672  INFO 26736 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 09:25:14.544  INFO 26736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:25:15.130  INFO 26736 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 09:25:15.216  INFO 26736 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 09:25:15.337  INFO 26736 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-01 09:25:15.338  INFO 26736 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-01 09:25:15.369  INFO 26736 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 31 ms
+2020-06-01 09:25:15.398  INFO 26736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 09:25:15.458  INFO 26736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 09:25:15.551  INFO 26736 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 09:25:15.978  INFO 26736 --- [main] c.x.l.controller.LinkControllerTest      : Started LinkControllerTest in 12.626 seconds (JVM running for 14.961)
+2020-06-01 09:25:16.828 DEBUG 26736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 09:25:16.990 DEBUG 26736 --- [main] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from link link0_
+2020-06-01 09:25:17.192  WARN 26736 --- [main] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2020-06-01 09:25:17.220 DEBUG 26736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.status=? order by link0_.created_at asc
+2020-06-01 09:25:19.181 DEBUG 26736 --- [main] org.hibernate.SQL                        : select link0_.id as id1_0_, link0_.created_at as created_2_0_, link0_.last_modified_date as last_mod3_0_, link0_.status as status4_0_, link0_.fav_count as fav_coun5_0_, link0_.title as title6_0_, link0_.url as url7_0_ from link link0_ where link0_.url=?
+2020-06-01 09:25:19.328 DEBUG 26736 --- [main] org.hibernate.SQL                        : insert into link (id, created_at, last_modified_date, status, fav_count, title, url) values (null, ?, ?, ?, ?, ?, ?)
+2020-06-01 09:25:19.345 DEBUG 26736 --- [main] org.hibernate.SQL                        : insert into tag (id, tag_name) values (null, ?)
+2020-06-01 09:25:19.380 DEBUG 26736 --- [main] org.hibernate.SQL                        : update tag set tag_link=? where id=?
+2020-06-01 09:25:19.479  INFO 26736 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 09:25:19.480  INFO 26736 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:25:19.492  INFO 26736 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:25:19.499  INFO 26736 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-01 09:25:19.507  INFO 26736 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-01 09:29:33.950  INFO 31424 --- [Thread-15] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-01 09:29:33.950  INFO 31424 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:29:33.953  INFO 31424 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:29:34.158  WARN 31424 --- [Thread-15] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-01 09:29:34.158  INFO 31424 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-06-01 09:29:34.163  INFO 31424 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-06-01 09:29:35.306  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 31424 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-06-01 09:29:35.306  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-06-01 09:29:35.857  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-01 09:29:35.871  INFO 31424 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 1 JPA repository interfaces.
+2020-06-01 09:29:36.350  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-06-01 09:29:36.351  INFO 31424 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-01 09:29:36.351  INFO 31424 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-01 09:29:36.379  INFO 31424 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-01 09:29:36.379  INFO 31424 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1067 ms
+2020-06-01 09:29:36.426  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-06-01 09:29:36.431  INFO 31424 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-06-01 09:29:36.431  INFO 31424 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-06-01 09:29:36.472  INFO 31424 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:test (H2 1.4)
+2020-06-01 09:29:36.474  WARN 31424 --- [restartedMain] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 1.4.199.
+2020-06-01 09:29:36.479  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.005s)
+2020-06-01 09:29:36.486  INFO 31424 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2020-06-01 09:29:36.503  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2020-06-01 09:29:36.506  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1 - create schema
+2020-06-01 09:29:36.517  INFO 31424 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.019s)
+2020-06-01 09:29:36.553  INFO 31424 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-01 09:29:36.561  INFO 31424 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-01 09:29:36.664 DEBUG 31424 --- [restartedMain] org.hibernate.SQL                        : alter table tag add constraint FKm5lqdt8ek2gmtu8y0jun589r4 foreign key (tag_link) references link
+2020-06-01 09:29:36.667  INFO 31424 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 09:29:36.667  INFO 31424 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-01 09:29:36.846  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-06-01 09:29:36.846  INFO 31424 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-06-01 09:29:36.871  INFO 31424 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-01 09:29:37.056  INFO 31424 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-01 09:29:37.154  INFO 31424 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-01 09:29:37.223  INFO 31424 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-01 09:29:37.270  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-01 09:29:37.271  INFO 31424 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-01 09:29:37.282  INFO 31424 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-01 09:29:37.342  INFO 31424 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-06-01 09:29:37.343  INFO 31424 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.118 seconds (JVM running for 1880.455)
+2020-06-01 09:29:37.347  INFO 31424 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

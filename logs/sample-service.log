@@ -1,0 +1,1027 @@
+2020-05-30 00:11:01.721  INFO 25352 --- [Thread-154] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:11:01.736  INFO 25352 --- [Thread-154] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:11:01.945  WARN 25352 --- [Thread-154] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:11:01.945  INFO 25352 --- [Thread-154] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2020-05-30 00:11:01.948  INFO 25352 --- [Thread-154] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+2020-05-30 00:11:03.784  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:11:03.784  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:11:04.176  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:11:04.206 ERROR 25352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type PostRepositoryJPA not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:1.8.0_221]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:1.8.0_221]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:1.8.0_221]
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:108) ~[na:1.8.0_221]
+	at java.lang.Class.getGenericInterfaces(Class.java:913) ~[na:1.8.0_221]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:492) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:271) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:248) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:115) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:104) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:93) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324) ~[na:1.8.0_221]
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:71) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:58) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:52) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:73) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:102) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:148) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:107) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:385) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:1.8.0_221]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:384) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.xebia.linksharing.LinkSharing.main(LinkSharing.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: java.lang.ClassNotFoundException: PostRepositoryJPA
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_221]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_221]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_221]
+	at java.lang.Class.forName(Class.java:348) ~[na:1.8.0_221]
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:1.8.0_221]
+	... 41 common frames omitted
+
+2020-05-30 00:11:07.718  INFO 25352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 00:11:07.720  INFO 25352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 00:11:07.727  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:11:07.727  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:11:08.256  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:11:08.278 ERROR 25352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type PostRepositoryJPA not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:1.8.0_221]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:1.8.0_221]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:1.8.0_221]
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:108) ~[na:1.8.0_221]
+	at java.lang.Class.getGenericInterfaces(Class.java:913) ~[na:1.8.0_221]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:492) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:271) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:248) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:115) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:104) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:93) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324) ~[na:1.8.0_221]
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:71) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:58) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:52) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:73) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:102) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:148) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:107) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:385) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:1.8.0_221]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:384) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.xebia.linksharing.LinkSharing.main(LinkSharing.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: java.lang.ClassNotFoundException: PostRepositoryJPA
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_221]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_221]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_221]
+	at java.lang.Class.forName(Class.java:348) ~[na:1.8.0_221]
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:1.8.0_221]
+	... 41 common frames omitted
+
+2020-05-30 00:11:30.187  INFO 25352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 00:11:30.187  INFO 25352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 00:11:30.194  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:11:30.194  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:11:30.637  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:11:30.653  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-05-30 00:11:31.020  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:11:31.021  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:11:31.021  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:11:31.045  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:11:31.045  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 848 ms
+2020-05-30 00:11:31.064  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2020-05-30 00:11:31.066  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2020-05-30 00:11:31.070  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:11:31.110  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:11:31.118  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:11:31.243 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:11:31.244 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:11:31.245 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:11:31.246 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:11:31.247 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:11:31.249 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:11:31.249 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:11:31.249 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:11:31.250 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:11:31.251  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:11:31.251  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:11:31.395  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:11:31.395  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:11:31.412  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:11:31.420  WARN 25352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkSharingController' defined in file [D:\pagination-example\pagination-example\target\classes\com\xebia\linksharing\controller\LinkSharingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+2020-05-30 00:11:31.420  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:11:31.621  WARN 25352 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:11:31.621  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2020-05-30 00:11:31.623  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2020-05-30 00:11:31.624  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-30 00:11:31.632  INFO 25352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 00:11:31.634 ERROR 25352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkSharingController' defined in file [D:\pagination-example\pagination-example\target\classes\com\xebia\linksharing\controller\LinkSharingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.xebia.linksharing.LinkSharing.main(LinkSharing.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at com.xebia.linksharing.controller.LinkSharingController.<init>(LinkSharingController.java:41) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_221]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_221]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 24 common frames omitted
+
+2020-05-30 00:12:32.515  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:12:32.515  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:12:32.964  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:12:32.974  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 1 JPA repository interfaces.
+2020-05-30 00:12:33.328  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:12:33.329  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:12:33.329  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:12:33.355  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:12:33.355  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 836 ms
+2020-05-30 00:12:33.376  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2020-05-30 00:12:33.377  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2020-05-30 00:12:33.380  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:12:33.418  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:12:33.423  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:12:33.526 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:12:33.526 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:12:33.528 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:12:33.528 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:12:33.529 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:12:33.530 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:12:33.530 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:12:33.531 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:12:33.531 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:12:33.532  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:12:33.532  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:12:33.615  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:12:33.615  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:12:33.633  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:12:33.641  WARN 25352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkSharingController' defined in file [D:\pagination-example\pagination-example\target\classes\com\xebia\linksharing\controller\LinkSharingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+2020-05-30 00:12:33.641  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:12:33.842  WARN 25352 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:12:33.842  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2020-05-30 00:12:33.843  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2020-05-30 00:12:33.844  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-05-30 00:12:33.850  INFO 25352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 00:12:33.852 ERROR 25352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'linkSharingController' defined in file [D:\pagination-example\pagination-example\target\classes\com\xebia\linksharing\controller\LinkSharingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.xebia.linksharing.LinkSharing.main(LinkSharing.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.xebia.linksharing.controller.LinkSharingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.xebia.linksharing.repository.CommentRepository cannot be resolved
+	The import com.xebia.linksharing.repository.PostRepository cannot be resolved
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	CommentRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+	PostRepository cannot be resolved to a type
+
+	at com.xebia.linksharing.controller.LinkSharingController.<init>(LinkSharingController.java:41) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_221]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_221]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 24 common frames omitted
+
+2020-05-30 00:14:44.791  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:14:44.791  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:14:45.209  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:14:45.221  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-05-30 00:14:45.599  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:14:45.600  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:14:45.600  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:14:45.631  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:14:45.631  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 837 ms
+2020-05-30 00:14:45.653  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2020-05-30 00:14:45.654  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2020-05-30 00:14:45.663  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:14:45.742  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:14:45.753  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:14:45.895 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:14:45.897 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:14:45.898 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:14:45.900 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:14:45.902 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:14:45.906 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:14:45.907 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:14:45.907 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:14:45.908 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:14:45.914  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:14:45.914  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:14:46.061  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:14:46.061  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:14:46.079  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:14:46.274  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:14:46.358  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:14:46.478  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:14:46.479  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:14:46.491  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:14:46.546  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:14:46.547  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.783 seconds (JVM running for 7217.763)
+2020-05-30 00:14:46.550  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:20:58.899  INFO 25352 --- [Thread-159] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:20:58.901  INFO 25352 --- [Thread-159] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:20:59.104  WARN 25352 --- [Thread-159] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:20:59.104  INFO 25352 --- [Thread-159] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2020-05-30 00:20:59.106  INFO 25352 --- [Thread-159] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+2020-05-30 00:21:01.048  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:21:01.048  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:21:01.523  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:21:01.535  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-05-30 00:21:01.896  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:21:01.897  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:21:01.897  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:21:01.921  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:21:01.921  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 869 ms
+2020-05-30 00:21:01.939  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2020-05-30 00:21:01.941  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2020-05-30 00:21:01.943  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:21:01.975  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:21:01.981  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:21:02.089 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:21:02.090 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:21:02.091 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:21:02.092 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:21:02.093 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:21:02.093 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:21:02.093 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:21:02.094 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:21:02.094 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:21:02.095  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:21:02.095  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:21:02.183  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:21:02.183  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:21:02.200  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:21:02.396  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:21:02.448  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:21:02.554  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:21:02.555  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:21:02.565  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:21:02.576  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:21:02.576  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.561 seconds (JVM running for 7593.793)
+2020-05-30 00:21:02.579  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:22:38.046  INFO 25352 --- [Thread-176] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:22:38.051  INFO 25352 --- [Thread-176] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:22:38.254  WARN 25352 --- [Thread-176] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:22:38.254  INFO 25352 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown initiated...
+2020-05-30 00:22:38.256  INFO 25352 --- [Thread-176] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown completed.
+2020-05-30 00:22:39.841  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:22:39.841  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:22:40.362  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:22:40.373  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-05-30 00:22:40.745  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:22:40.745  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:22:40.745  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:22:40.767  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:22:40.767  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 923 ms
+2020-05-30 00:22:40.785  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Starting...
+2020-05-30 00:22:40.787  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Start completed.
+2020-05-30 00:22:40.790  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:22:40.835  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:22:40.841  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:22:40.941 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:22:40.942 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:22:40.943 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:22:40.943 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:22:40.944 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:22:40.944 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:22:40.944 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:22:40.945 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:22:40.945 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:22:40.946  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:22:40.946  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:22:41.069  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:22:41.069  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:22:41.093  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:22:41.289  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:22:41.397  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:22:41.544  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:22:41.545  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:22:41.555  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:22:41.563  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:22:41.563  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.755 seconds (JVM running for 7692.78)
+2020-05-30 00:22:41.567  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:22:52.157  INFO 25352 --- [Thread-181] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:22:52.160  INFO 25352 --- [Thread-181] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:22:52.361  WARN 25352 --- [Thread-181] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:22:52.361  INFO 25352 --- [Thread-181] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown initiated...
+2020-05-30 00:22:52.363  INFO 25352 --- [Thread-181] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown completed.
+2020-05-30 00:22:53.615  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:22:53.615  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:22:54.020  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:22:54.030  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 1 JPA repository interfaces.
+2020-05-30 00:22:54.376  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:22:54.378  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:22:54.378  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:22:54.409  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:22:54.409  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 790 ms
+2020-05-30 00:22:54.443  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Starting...
+2020-05-30 00:22:54.445  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Start completed.
+2020-05-30 00:22:54.449  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:22:54.490  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:22:54.496  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:22:54.609 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:22:54.610 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:22:54.611 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:22:54.612 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:22:54.613 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:22:54.614 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:22:54.614 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:22:54.614 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:22:54.615 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:22:54.616  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:22:54.616  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:22:54.743  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:22:54.743  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:22:54.757  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:22:54.921  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:22:54.972  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:22:55.053  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:22:55.054  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:22:55.063  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:22:55.073  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:22:55.074  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.49 seconds (JVM running for 7706.291)
+2020-05-30 00:22:55.076  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:24:59.536  INFO 25352 --- [Thread-186] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:24:59.538  INFO 25352 --- [Thread-186] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:24:59.741  WARN 25352 --- [Thread-186] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:24:59.741  INFO 25352 --- [Thread-186] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Shutdown initiated...
+2020-05-30 00:24:59.743  INFO 25352 --- [Thread-186] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Shutdown completed.
+2020-05-30 00:25:00.869  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:25:00.870  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:25:01.354  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:25:01.368  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 1 JPA repository interfaces.
+2020-05-30 00:25:01.941  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:25:01.942  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:25:01.942  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:25:01.968  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:25:01.968  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1096 ms
+2020-05-30 00:25:01.996  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Starting...
+2020-05-30 00:25:01.998  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Start completed.
+2020-05-30 00:25:02.001  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:25:02.061  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:25:02.073  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:25:02.238 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:25:02.241 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:25:02.242 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:25:02.244 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:25:02.245 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:25:02.246 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:25:02.246 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:25:02.247 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:25:02.247 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:25:02.248  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:25:02.248  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:25:02.452  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:25:02.452  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:25:02.485  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:25:02.751  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:25:02.835  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:25:02.934  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:25:02.937  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:25:02.946  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:25:02.998  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:25:02.999  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.158 seconds (JVM running for 7834.216)
+2020-05-30 00:25:03.002  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:25:50.641  INFO 25352 --- [Thread-191] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:25:50.644  INFO 25352 --- [Thread-191] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:25:50.846  WARN 25352 --- [Thread-191] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:25:50.846  INFO 25352 --- [Thread-191] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown initiated...
+2020-05-30 00:25:50.847  INFO 25352 --- [Thread-191] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown completed.
+2020-05-30 00:25:51.962  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:25:51.962  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:25:52.455  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:25:52.471  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 1 JPA repository interfaces.
+2020-05-30 00:25:53.009  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:25:53.010  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:25:53.011  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:25:53.039  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:25:53.039  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1074 ms
+2020-05-30 00:25:53.062  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Starting...
+2020-05-30 00:25:53.064  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Start completed.
+2020-05-30 00:25:53.068  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:25:53.116  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:25:53.123  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:25:53.315 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:25:53.316 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:25:53.317 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:25:53.318 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:25:53.318 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:25:53.319 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:25:53.319 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:25:53.320 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:25:53.320 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:25:53.321  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:25:53.322  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:25:53.465  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:25:53.465  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:25:53.487  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:25:53.732  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:25:53.794  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:25:53.908  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:25:53.910  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:25:53.916  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:25:53.956  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:25:53.957  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.024 seconds (JVM running for 7885.173)
+2020-05-30 00:25:53.959  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:26:04.551  INFO 25352 --- [Thread-196] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:26:04.557  INFO 25352 --- [Thread-196] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:26:04.761  WARN 25352 --- [Thread-196] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:26:04.761  INFO 25352 --- [Thread-196] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown initiated...
+2020-05-30 00:26:04.762  INFO 25352 --- [Thread-196] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown completed.
+2020-05-30 00:26:05.850  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:26:05.850  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:26:06.436  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:26:06.450  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 1 JPA repository interfaces.
+2020-05-30 00:26:06.880  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:26:06.881  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:26:06.881  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:26:06.909  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:26:06.909  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1055 ms
+2020-05-30 00:26:06.930  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Starting...
+2020-05-30 00:26:06.933  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Start completed.
+2020-05-30 00:26:06.936  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:26:06.982  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:26:06.989  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:26:07.098 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:26:07.099 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:26:07.100 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:26:07.101 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:26:07.102 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:26:07.102 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:26:07.102 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:26:07.103 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:26:07.103 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:26:07.104  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:26:07.104  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:26:07.228  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:26:07.228  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:26:07.245  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:26:07.420  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:26:07.510  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:26:07.612  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:26:07.614  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:26:07.624  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:26:07.725  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:26:07.726  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.903 seconds (JVM running for 7898.943)
+2020-05-30 00:26:07.729  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:26:36.600  INFO 25352 --- [Thread-201] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:26:36.602  INFO 25352 --- [Thread-201] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:26:36.805  WARN 25352 --- [Thread-201] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:26:36.805  INFO 25352 --- [Thread-201] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown initiated...
+2020-05-30 00:26:36.806  INFO 25352 --- [Thread-201] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown completed.
+2020-05-30 00:26:38.020  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:26:38.020  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:26:38.491  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:26:38.503  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 1 JPA repository interfaces.
+2020-05-30 00:26:39.004  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:26:39.005  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:26:39.005  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:26:39.041  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:26:39.041  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1018 ms
+2020-05-30 00:26:39.068  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Starting...
+2020-05-30 00:26:39.071  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Start completed.
+2020-05-30 00:26:39.075  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:26:39.123  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:26:39.130  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:26:39.231 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:26:39.232 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:26:39.233 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:26:39.234 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:26:39.235 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:26:39.235 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:26:39.236 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:26:39.236 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:26:39.237 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:26:39.238  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:26:39.238  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:26:39.370  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:26:39.370  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:26:39.388  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:26:39.566  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:26:39.636  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:26:39.728  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:26:39.730  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:26:39.738  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:26:39.782  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:26:39.782  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.792 seconds (JVM running for 7930.999)
+2020-05-30 00:26:39.785  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:28:48.921  INFO 25352 --- [Thread-206] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:28:48.924  INFO 25352 --- [Thread-206] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:28:49.126  WARN 25352 --- [Thread-206] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:28:49.126  INFO 25352 --- [Thread-206] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown initiated...
+2020-05-30 00:28:49.128  INFO 25352 --- [Thread-206] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown completed.
+2020-05-30 00:28:50.460  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:28:50.460  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:28:50.950  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:28:50.962  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 1 JPA repository interfaces.
+2020-05-30 00:28:51.349  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:28:51.350  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:28:51.351  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:28:51.383  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:28:51.384  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 918 ms
+2020-05-30 00:28:51.412  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Starting...
+2020-05-30 00:28:51.414  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Start completed.
+2020-05-30 00:28:51.418  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:28:51.456  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:28:51.462  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:28:51.569 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:28:51.569 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:28:51.570 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:28:51.571 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:28:51.572 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:28:51.573 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:28:51.573 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:28:51.574 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:28:51.574 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:28:51.575  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:28:51.575  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:28:51.709  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:28:51.709  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:28:51.730  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:28:51.974  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:28:52.072  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:28:52.183  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:28:52.185  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:28:52.193  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:28:52.237  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:28:52.238  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.856 seconds (JVM running for 8063.454)
+2020-05-30 00:28:52.241  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:34:37.324  INFO 25352 --- [Thread-211] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:34:37.326  INFO 25352 --- [Thread-211] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:34:37.527  WARN 25352 --- [Thread-211] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:34:37.527  INFO 25352 --- [Thread-211] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Shutdown initiated...
+2020-05-30 00:34:37.529  INFO 25352 --- [Thread-211] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Shutdown completed.
+2020-05-30 00:34:39.040  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:34:39.040  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:34:39.610  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:34:39.623  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 1 JPA repository interfaces.
+2020-05-30 00:34:40.077  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:34:40.078  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:34:40.078  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:34:40.103  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:34:40.103  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1057 ms
+2020-05-30 00:34:40.125  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Starting...
+2020-05-30 00:34:40.127  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Start completed.
+2020-05-30 00:34:40.130  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:34:40.172  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:34:40.178  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:34:40.309 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:34:40.309 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:34:40.310 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:34:40.311 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:34:40.312 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:34:40.312 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:34:40.313 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:34:40.313 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:34:40.313 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:34:40.314  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:34:40.315  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:34:40.481  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:34:40.482  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:34:40.507  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:34:40.736  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:34:40.806  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:34:40.908  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:34:40.910  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:34:40.922  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:34:40.971  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:34:40.972  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.998 seconds (JVM running for 8412.188)
+2020-05-30 00:34:40.975  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:34:53.526  INFO 25352 --- [Thread-216] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:34:53.527  INFO 25352 --- [Thread-216] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:34:53.729  WARN 25352 --- [Thread-216] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:34:53.730  INFO 25352 --- [Thread-216] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Shutdown initiated...
+2020-05-30 00:34:53.731  INFO 25352 --- [Thread-216] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Shutdown completed.
+2020-05-30 00:34:54.970  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:34:54.971  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:34:55.620  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:34:55.635  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 1 JPA repository interfaces.
+2020-05-30 00:34:56.128  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:34:56.128  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:34:56.129  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:34:56.155  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:34:56.156  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1178 ms
+2020-05-30 00:34:56.184  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Starting...
+2020-05-30 00:34:56.186  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Start completed.
+2020-05-30 00:34:56.189  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:34:56.229  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:34:56.237  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:34:56.392 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:34:56.394 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:34:56.395 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:34:56.397 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:34:56.399 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:34:56.400 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:34:56.400 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:34:56.401 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:34:56.401 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:34:56.402  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:34:56.402  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:34:56.555  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:34:56.555  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:34:56.575  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:34:56.800  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:34:56.922  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:34:57.071  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:34:57.072  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:34:57.084  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:34:57.134  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:34:57.135  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.197 seconds (JVM running for 8428.352)
+2020-05-30 00:34:57.138  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:35:05.560  INFO 25352 --- [Thread-221] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:35:05.561  INFO 25352 --- [Thread-221] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:35:05.763  WARN 25352 --- [Thread-221] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:35:05.763  INFO 25352 --- [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Shutdown initiated...
+2020-05-30 00:35:05.766  INFO 25352 --- [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Shutdown completed.
+2020-05-30 00:35:07.075  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:35:07.075  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:35:07.678  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:35:07.695  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 1 JPA repository interfaces.
+2020-05-30 00:35:08.175  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:35:08.176  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:35:08.176  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:35:08.204  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:35:08.205  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1125 ms
+2020-05-30 00:35:08.229  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Starting...
+2020-05-30 00:35:08.232  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Start completed.
+2020-05-30 00:35:08.236  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:35:08.285  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:35:08.292  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:35:08.403 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:35:08.404 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:35:08.405 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:35:08.406 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:35:08.407 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:35:08.407 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:35:08.408 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:35:08.408 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:35:08.408 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:35:08.409  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:35:08.410  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:35:08.558  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:35:08.558  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:35:08.583  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:35:08.840  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:35:08.923  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:35:09.075  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:35:09.077  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:35:09.093  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:35:09.136  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:35:09.137  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.111 seconds (JVM running for 8440.353)
+2020-05-30 00:35:09.139  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:35:39.764  INFO 25352 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-30 00:35:39.766  INFO 25352 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 00:35:39.771  INFO 25352 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-30 00:36:00.214 DEBUG 25352 --- [http-nio-8090-exec-10] org.hibernate.SQL                        : select count(distinct link0_.id) as col_0_0_ from links link0_
+2020-05-30 00:37:49.080  INFO 25352 --- [Thread-226] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:37:49.081  INFO 25352 --- [Thread-226] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:37:49.283  WARN 25352 --- [Thread-226] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:37:49.283  INFO 25352 --- [Thread-226] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Shutdown initiated...
+2020-05-30 00:37:49.285  INFO 25352 --- [Thread-226] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Shutdown completed.
+2020-05-30 00:37:50.891  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:37:50.892  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:37:51.434  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:37:51.462  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 1 JPA repository interfaces.
+2020-05-30 00:37:51.935  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:37:51.937  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:37:51.937  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:37:51.965  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:37:51.965  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1068 ms
+2020-05-30 00:37:51.990  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Starting...
+2020-05-30 00:37:51.992  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Start completed.
+2020-05-30 00:37:51.996  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:37:52.052  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:37:52.058  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:37:52.212 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:37:52.212 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:37:52.213 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:37:52.214 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:37:52.215 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:37:52.216 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:37:52.216 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:37:52.217 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:37:52.217 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:37:52.218  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:37:52.218  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:37:52.349  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:37:52.350  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:37:52.374  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:37:52.625  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:37:52.741  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:37:52.889  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:37:52.890  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:37:52.897  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:37:52.952  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:37:52.953  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.105 seconds (JVM running for 8604.17)
+2020-05-30 00:37:52.955  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:38:00.394  INFO 25352 --- [Thread-231] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:38:00.396  INFO 25352 --- [Thread-231] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:38:00.596  WARN 25352 --- [Thread-231] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:38:00.596  INFO 25352 --- [Thread-231] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Shutdown initiated...
+2020-05-30 00:38:00.598  INFO 25352 --- [Thread-231] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Shutdown completed.
+2020-05-30 00:38:02.279  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:38:02.279  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:38:02.755  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:38:02.768  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-05-30 00:38:03.270  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:38:03.271  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:38:03.271  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:38:03.317  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:38:03.317  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1034 ms
+2020-05-30 00:38:03.348  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-47 - Starting...
+2020-05-30 00:38:03.350  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-47 - Start completed.
+2020-05-30 00:38:03.354  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:38:03.414  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:38:03.422  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:38:03.621 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:38:03.622 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:38:03.623 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:38:03.624 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:38:03.625 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:38:03.627 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:38:03.627 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:38:03.628 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:38:03.643 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:38:03.646  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:38:03.647  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:38:03.799  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:38:03.799  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:38:03.819  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:38:04.060  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:38:04.156  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:38:04.300  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:38:04.301  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:38:04.311  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:38:04.361  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:38:04.362  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.118 seconds (JVM running for 8615.58)
+2020-05-30 00:38:04.367  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:38:16.983  INFO 25352 --- [Thread-236] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:38:16.987  INFO 25352 --- [Thread-236] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:38:17.189  WARN 25352 --- [Thread-236] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:38:17.189  INFO 25352 --- [Thread-236] com.zaxxer.hikari.HikariDataSource       : HikariPool-47 - Shutdown initiated...
+2020-05-30 00:38:17.191  INFO 25352 --- [Thread-236] com.zaxxer.hikari.HikariDataSource       : HikariPool-47 - Shutdown completed.
+2020-05-30 00:38:18.903  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:38:18.904  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:38:19.532  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:38:19.544  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 JPA repository interfaces.
+2020-05-30 00:38:19.993  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:38:19.994  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:38:19.995  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:38:20.024  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:38:20.024  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1116 ms
+2020-05-30 00:38:20.045  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Starting...
+2020-05-30 00:38:20.048  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Start completed.
+2020-05-30 00:38:20.051  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:38:20.086  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:38:20.090  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:38:20.205 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:38:20.206 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:38:20.207 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:38:20.207 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:38:20.208 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:38:20.210 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:38:20.210 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:38:20.211 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:38:20.211 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:38:20.212  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:38:20.213  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:38:20.406  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:38:20.406  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:38:20.439  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:38:20.683  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:38:20.766  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:38:20.895  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:38:20.896  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:38:20.904  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:38:20.983  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:38:20.983  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 2.16 seconds (JVM running for 8632.2)
+2020-05-30 00:38:20.986  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:38:26.170  INFO 25352 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-30 00:38:26.171  INFO 25352 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 00:38:26.176  INFO 25352 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-05-30 00:39:33.710 DEBUG 25352 --- [http-nio-8090-exec-5] org.hibernate.SQL                        : select link0_.id as id1_2_, link0_.created_at as created_2_2_, link0_.fav_count as fav_coun3_2_, link0_.status as status4_2_, link0_.title as title5_2_, link0_.url as url6_2_ from links link0_ where link0_.status=? order by link0_.created_at asc
+2020-05-30 00:41:57.733  INFO 25352 --- [Thread-241] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:41:57.737  INFO 25352 --- [Thread-241] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:41:57.943  WARN 25352 --- [Thread-241] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:41:57.943  INFO 25352 --- [Thread-241] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Shutdown initiated...
+2020-05-30 00:41:57.945  INFO 25352 --- [Thread-241] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Shutdown completed.
+2020-05-30 00:41:59.744  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Starting LinkSharing on XE-GGN-IT-00021 with PID 25352 (D:\pagination-example\pagination-example\target\classes started by upatra in D:\pagination-example\pagination-example)
+2020-05-30 00:41:59.744  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : The following profiles are active: dev
+2020-05-30 00:42:00.277  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 00:42:00.287  INFO 25352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 1 JPA repository interfaces.
+2020-05-30 00:42:00.665  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-05-30 00:42:00.666  INFO 25352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-30 00:42:00.666  INFO 25352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-30 00:42:00.692  INFO 25352 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-30 00:42:00.692  INFO 25352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 945 ms
+2020-05-30 00:42:00.726  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Starting...
+2020-05-30 00:42:00.729  INFO 25352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Start completed.
+2020-05-30 00:42:00.732  INFO 25352 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:test'
+2020-05-30 00:42:00.786  INFO 25352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-30 00:42:00.793  INFO 25352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-30 00:42:00.874 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table albums (id bigint not null, artist varchar(255), description varchar(255), created_time timestamp, title varchar(255), primary key (id))
+2020-05-30 00:42:00.876 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table comments (id bigint generated by default as identity, created_at timestamp not null, text varchar(255) not null, post_id bigint not null, primary key (id))
+2020-05-30 00:42:00.876 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table links (id bigint generated by default as identity, created_at timestamp not null, fav_count integer, status boolean, title varchar(255), url varchar(255), primary key (id))
+2020-05-30 00:42:00.878 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table posts (id bigint generated by default as identity, created_at timestamp not null, content clob not null, description varchar(250) not null, title varchar(100) not null, primary key (id))
+2020-05-30 00:42:00.879 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, created_time timestamp, dob date, password varchar(255), updated_time timestamp, user_name varchar(255), primary key (id))
+2020-05-30 00:42:00.880 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts drop constraint if exists UK_mchce1gm7f6otpphxd6ixsdps
+2020-05-30 00:42:00.880 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table posts add constraint UK_mchce1gm7f6otpphxd6ixsdps unique (title)
+2020-05-30 00:42:00.880 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2020-05-30 00:42:00.880 DEBUG 25352 --- [restartedMain] org.hibernate.SQL                        : alter table comments add constraint FKh4c7lvsc298whoyd4w9ta25cr foreign key (post_id) references posts
+2020-05-30 00:42:00.882  INFO 25352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-30 00:42:00.882  INFO 25352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:42:00.999  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application configuration, using profiles: dev
+2020-05-30 00:42:00.999  INFO 25352 --- [restartedMain] c.x.l.infra.config.web.WebConfigurer     : Web application fully configured
+2020-05-30 00:42:01.018  INFO 25352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 00:42:01.214  INFO 25352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 00:42:01.286  INFO 25352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:42:01.433  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-05-30 00:42:01.434  INFO 25352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-05-30 00:42:01.443  INFO 25352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-05-30 00:42:01.482  INFO 25352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2020-05-30 00:42:01.483  INFO 25352 --- [restartedMain] com.xebia.linksharing.LinkSharing        : Started LinkSharing in 1.767 seconds (JVM running for 8852.699)
+2020-05-30 00:42:01.485  INFO 25352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 00:43:21.914  INFO 25352 --- [Thread-246] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 00:43:21.918  INFO 25352 --- [Thread-246] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 00:43:22.120  WARN 25352 --- [Thread-246] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-05-30 00:43:22.120  INFO 25352 --- [Thread-246] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Shutdown initiated...
+2020-05-30 00:43:22.122  INFO 25352 --- [Thread-246] com.zaxxer.hikari.HikariDataSource       : HikariPool-49 - Shutdown completed.
