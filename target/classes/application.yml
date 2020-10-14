@@ -23,6 +23,7 @@ logging:
         org.hibernate.SQL: DEBUG
         #com.zaxxer.hikari: DEBUG
 
+
 spring:
     profiles:
         active: dev
@@ -49,9 +50,17 @@ spring:
             dialect: org.hibernate.dialect.H2Dialect
     messages:
         basename: i18n/messages
+         
 server:
-    port: 8090            
-                    
+    port: 8090     
+    
+management:
+   endpoints:
+       web: 
+          exposure:
+            include: env,beans
+    
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
